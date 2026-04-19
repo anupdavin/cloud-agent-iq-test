@@ -33,7 +33,7 @@ jobs:
       - name: Verify required files exist
         run: |
           set -e
-          required=(index.html styles.css app.js 404.html favicon.svg robots.txt sitemap.xml og-image.svg)
+          required=(index.html styles.css app.js 404.html migrate.html migrate.css favicon.svg robots.txt sitemap.xml og-image.svg)
           missing=0
           for f in "${required[@]}"; do
             if [ ! -f "$f" ]; then
@@ -49,9 +49,13 @@ jobs:
         run: |
           set -e
           fail=0
-          # Pull href="/..." and src="/..." from the HTML, skip external, anchors, data: URIs
-          refs=$(grep -ohE '(href|src)="/[^"#]*"' index.html 404.html \
+          # Grep both absolute (/foo) and relative (foo.html) references from all HTML pages.
+          # Skip external URLs, anchor fragments, data: URIs, and mailto links.
+          refs=$(grep -ohE '(href|src)="[^"#]+\.(html|css|js|svg|png|xml|txt|ico)"' index.html 404.html migrate.html \
                  | sed -E 's/.*="([^"]*)".*/\1/' \
+                 | grep -v '^https\?://' \
+                 | grep -v '^mailto:' \
+                 | grep -v '^data:' \
                  | sort -u)
           for ref in $refs; do
             # "/" means the site root (index.html) — always valid
@@ -59,6 +63,7 @@ jobs:
               echo "  ✓ $ref (site root)"
               continue
             fi
+            # Strip leading / for absolute paths; relative paths resolve as-is
             local_path="${ref#/}"
             if [ -f "$local_path" ]; then
               echo "  ✓ $ref"
@@ -95,7 +100,7 @@ jobs:
       - name: HTML sanity (title + viewport present, DOCTYPE correct)
         run: |
           set -e
-          for f in index.html 404.html; do
+          for f in index.html 404.html migrate.html; do
             head -1 "$f" | grep -qi '<!doctype html>' || { echo "::error file=$f::Missing DOCTYPE on line 1"; exit 1; }
             grep -q '<title>' "$f" || { echo "::error file=$f::Missing <title>"; exit 1; }
             grep -q 'name="viewport"' "$f" || { echo "::error file=$f::Missing viewport meta"; exit 1; }
@@ -116,6 +121,7 @@ jobs:
           mkdir -p _site
           # Copy only the files we want Pages to serve. Explicit allowlist > blanket copy.
           cp index.html styles.css app.js 404.html _site/
+          cp migrate.html migrate.css _site/
           cp favicon.svg apple-touch-icon.svg og-image.svg _site/
           cp robots.txt sitemap.xml _site/
           # CNAME is created below if configured
