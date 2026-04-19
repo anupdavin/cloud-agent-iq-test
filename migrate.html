@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Fixed-price Java 8/11 and Spring Boot 2.x migration. Two senior engineers, AI-augmented delivery, audit-ready evidence. Modernize in weeks, not quarters." />
+  <meta name="theme-color" content="#0A0907" />
+  <meta name="author" content="Cloud Agent IQ" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://cloudagentiq.com/migrate" />
+  <title>Java & Spring Boot Migration — Cloud Agent IQ</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cloud Agent IQ" />
+  <meta property="og:title" content="Java & Spring Boot migration — 3 weeks, fixed price, audit-ready" />
+  <meta property="og:description" content="Your Spring Boot 2.7 is out of support. Your Java 11 hits EOL in September. Two senior engineers, AI-augmented delivery, full accountability end-to-end." />
+  <meta property="og:url" content="https://cloudagentiq.com/migrate" />
+  <meta property="og:image" content="https://cloudagentiq.com/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Java & Spring Boot migration — 3 weeks, fixed price, audit-ready" />
+  <meta name="twitter:description" content="Two senior engineers. AI-augmented delivery. End-to-end accountability." />
+  <meta name="twitter:image" content="https://cloudagentiq.com/og-image.svg" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Java & Spring Boot Migration Service",
+    "provider": {
+      "@type": "Organization",
+      "name": "Cloud Agent IQ",
+      "url": "https://cloudagentiq.com"
+    },
+    "serviceType": "Software Modernization",
+    "description": "Fixed-price Java 8/11 → 21 and Spring Boot 2.x → 3.x migrations with audit-ready security evidence. Delivered by two senior engineers using AI-augmented tooling.",
+    "areaServed": "Worldwide"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.svg" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="migrate.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="./" aria-label="Cloud Agent IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+            <circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="1.25"/>
+            <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+            <circle cx="16" cy="2" r="1.5" fill="currentColor"/>
+            <circle cx="30" cy="16" r="1.5" fill="currentColor"/>
+            <circle cx="16" cy="30" r="1.5" fill="currentColor"/>
+            <circle cx="2" cy="16" r="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Cloud Agent IQ</span>
+          <span class="brand-sub">Migration Engineering</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#forcing">Deadlines</a>
+        <a href="#what">What you get</a>
+        <a href="#how">How</a>
+        <a href="#compare">Vs others</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#audit" class="btn btn-primary">Request free audit <span aria-hidden="true">↗</span></a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav aria-label="Mobile">
+        <a href="#forcing">Deadlines</a>
+        <a href="#what">What you get</a>
+        <a href="#how">How it works</a>
+        <a href="#compare">Vs others</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#audit" class="btn btn-primary btn-block btn-lg">Request free audit <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================================================
+         SECTION 1 — HERO
+         ============================================================ -->
+    <section class="hero hero-migrate">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-orbits" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="glow-m" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#E8704A" stop-opacity="0.4"/>
+              <stop offset="60%" stop-color="#E8704A" stop-opacity="0.05"/>
+              <stop offset="100%" stop-color="#E8704A" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="900" cy="400" r="500" fill="url(#glow-m)"/>
+          <g stroke="#E8704A" stroke-width="1" fill="none" opacity="0.14">
+            <ellipse cx="900" cy="400" rx="320" ry="110"/>
+            <ellipse cx="900" cy="400" rx="420" ry="150" transform="rotate(20 900 400)"/>
+            <ellipse cx="900" cy="400" rx="520" ry="190" transform="rotate(-15 900 400)"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container hero-grid hero-grid-migrate">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>Migration engineering</span>
+            <span class="divider">/</span>
+            <span>Java &amp; Spring Boot</span>
+          </div>
+
+          <h1 class="hero-title">
+            Your Spring Boot 2.7<br/>
+            is out of support.<br/>
+            Your <em>auditor</em> has noticed.
+          </h1>
+
+          <p class="hero-lede">
+            We migrate Java 8/11 and Spring Boot 2.x applications to current LTS — in weeks, not quarters. Fixed-price. End-to-end accountability. Audit-ready evidence at handover.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#audit" class="btn btn-primary btn-lg">
+              Request a free audit
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#forcing" class="btn btn-ghost btn-lg">
+              See the deadlines
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-num">20+</span>
+              <span class="meta-label">combined years in Java</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-num">3 weeks</span>
+              <span class="meta-label">typical engagement</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-num">Fixed</span>
+              <span class="meta-label">price, no overrun billing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero widget: audit sample -->
+        <aside class="hero-panel audit-panel" aria-label="Sample audit output">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span class="pulse"></span>
+              Stack health report
+            </div>
+            <div class="panel-tabs">
+              <span class="tab active">Findings</span>
+              <span class="tab">CVEs</span>
+              <span class="tab">Plan</span>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="audit-row severity-critical" style="--i:0">
+              <div class="audit-sev">CRITICAL</div>
+              <div class="audit-text">
+                <div class="audit-title">Spring Boot 2.7.18 · out of OSS support</div>
+                <div class="audit-sub">No security patches since Aug 2025 · 14 CVEs unpatched</div>
+              </div>
+            </div>
+            <div class="audit-row severity-high" style="--i:1">
+              <div class="audit-sev">HIGH</div>
+              <div class="audit-text">
+                <div class="audit-title">OpenJDK 11.0.19 · EOL September 2026</div>
+                <div class="audit-sub">5 months remaining · compliance exposure</div>
+              </div>
+            </div>
+            <div class="audit-row severity-high" style="--i:2">
+              <div class="audit-sev">HIGH</div>
+              <div class="audit-text">
+                <div class="audit-title">Hibernate 5.6 · Jakarta EE mismatch</div>
+                <div class="audit-sub">Blocks Spring Boot 3 upgrade · requires JPA refactor</div>
+              </div>
+            </div>
+            <div class="audit-row severity-med" style="--i:3">
+              <div class="audit-sev">MED</div>
+              <div class="audit-text">
+                <div class="audit-title">log4j 2.17.1 · superseded</div>
+                <div class="audit-sub">Not vulnerable but version-drift in 11 modules</div>
+              </div>
+            </div>
+            <div class="audit-row severity-low" style="--i:4">
+              <div class="audit-sev">LOW</div>
+              <div class="audit-text">
+                <div class="audit-title">Undertow 2.2.x · incompatible with Boot 4.x</div>
+                <div class="audit-sub">Future blocker · migrate to Tomcat 11 in upgrade path</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-footer">
+            <span class="mono">$ audit --repo=your-service</span>
+            <span class="panel-count">18 findings · scoped · 3-week migration</span>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Version marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Java 8 → 21</span><span>·</span>
+          <span>Spring Boot 2.7 → 3.x</span><span>·</span>
+          <span>Hibernate 5 → 7</span><span>·</span>
+          <span>Jakarta EE</span><span>·</span>
+          <span>Tomcat 10 → 11</span><span>·</span>
+          <span>JUnit 4 → 5</span><span>·</span>
+          <span>Spring Security 5 → 6</span><span>·</span>
+          <span>Servlet 4 → 6.1</span><span>·</span>
+          <span>Log4j / SLF4J currency</span><span>·</span>
+          <span>CVE remediation</span><span>·</span>
+          <span>SBOM generation</span><span>·</span>
+          <span>Java 8 → 21</span><span>·</span>
+          <span>Spring Boot 2.7 → 3.x</span><span>·</span>
+          <span>Hibernate 5 → 7</span><span>·</span>
+          <span>Jakarta EE</span><span>·</span>
+          <span>Tomcat 10 → 11</span><span>·</span>
+          <span>JUnit 4 → 5</span><span>·</span>
+          <span>Spring Security 5 → 6</span><span>·</span>
+          <span>Servlet 4 → 6.1</span><span>·</span>
+          <span>Log4j / SLF4J currency</span><span>·</span>
+          <span>CVE remediation</span><span>·</span>
+          <span>SBOM generation</span><span>·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2 — FORCING FUNCTION (TIMELINE)
+         ============================================================ -->
+    <section class="forcing" id="forcing">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 01</span>
+            <span class="section-label">The forcing function</span>
+          </div>
+          <h2 class="section-title">The dates are already on the calendar.</h2>
+          <p class="section-lede">This isn't a "nice to have." Each of these deadlines has compliance, insurance, and audit consequences. Most enterprises haven't started.</p>
+        </div>
+
+        <!-- Timeline -->
+        <ol class="timeline">
+
+          <li class="tl-item tl-past">
+            <div class="tl-date">
+              <span class="tl-month">AUG</span>
+              <span class="tl-year">2025</span>
+            </div>
+            <div class="tl-connector" aria-hidden="true"></div>
+            <div class="tl-body">
+              <div class="tl-status">Already past</div>
+              <h3 class="tl-title">Spring Boot 2.7 commercial support ended</h3>
+              <p class="tl-desc">Every week since, applications still on Spring Boot 2.x accumulate unpatched CVEs. No security fixes. No backports. No official help.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-past">
+            <div class="tl-date">
+              <span class="tl-month">DEC</span>
+              <span class="tl-year">2025</span>
+            </div>
+            <div class="tl-connector" aria-hidden="true"></div>
+            <div class="tl-body">
+              <div class="tl-status">Already past</div>
+              <h3 class="tl-title">Spring Boot 3.4 reached end of life</h3>
+              <p class="tl-desc">Teams who upgraded to 3.4 thinking they were safe are now on an EOL version. Upgrade path: Spring Boot 3.5 (supported through June 2026) or jump to 4.x.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-now">
+            <div class="tl-date">
+              <span class="tl-month">NOW</span>
+              <span class="tl-year">2026</span>
+            </div>
+            <div class="tl-connector" aria-hidden="true"></div>
+            <div class="tl-body">
+              <div class="tl-status">You are here</div>
+              <h3 class="tl-title">Spring Boot 4.0 shipped — breaking baseline</h3>
+              <p class="tl-desc">New baselines: Jakarta EE 11, Tomcat 11, Hibernate 7.1, Servlet 6.1, Kotlin 2.2. Undertow no longer supported. Migrations now touch more of the stack than before.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-future">
+            <div class="tl-date">
+              <span class="tl-month">JUN</span>
+              <span class="tl-year">2026</span>
+            </div>
+            <div class="tl-connector" aria-hidden="true"></div>
+            <div class="tl-body">
+              <div class="tl-status">~2 months out</div>
+              <h3 class="tl-title">Spring Boot 3.5 reaches end of support</h3>
+              <p class="tl-desc">The current default. Teams upgrading this quarter have a narrow window to land on a version that stays supported for more than six months.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-future tl-critical">
+            <div class="tl-date">
+              <span class="tl-month">SEP</span>
+              <span class="tl-year">2026</span>
+            </div>
+            <div class="tl-connector" aria-hidden="true"></div>
+            <div class="tl-body">
+              <div class="tl-status">~5 months out</div>
+              <h3 class="tl-title">Oracle Java 11 reaches end of life</h3>
+              <p class="tl-desc">24% of enterprise Java workloads still run on Java 11 (Azul, 2026 State of Java). Applications either migrate or move to a commercially supported OpenJDK distribution — fast.</p>
+            </div>
+          </li>
+
+          <li class="tl-item tl-future tl-critical">
+            <div class="tl-date">
+              <span class="tl-month">NOV</span>
+              <span class="tl-year">2026</span>
+            </div>
+            <div class="tl-connector" aria-hidden="true"></div>
+            <div class="tl-body">
+              <div class="tl-status">~7 months out</div>
+              <h3 class="tl-title">OpenJDK 8 reaches end of life</h3>
+              <p class="tl-desc">21% of enterprises still run Java 8. Post-EOL applications fail SOC 2, HIPAA, PCI-DSS, and GDPR audits. IBM puts the average breach cost at $4.88M.</p>
+            </div>
+          </li>
+
+        </ol>
+
+        <p class="forcing-foot">
+          <span class="mono">Sources:</span> Spring.io support policy updates · Azul 2026 State of Java · Oracle Java SE roadmap · IBM 2024 Cost of a Data Breach Report
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3 — WHAT YOU GET
+         ============================================================ -->
+    <section class="what" id="what">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 02</span>
+            <span class="section-label">Deliverables</span>
+          </div>
+          <h2 class="section-title">Three things on your desk at handover.</h2>
+          <p class="section-lede">Not a slide deck. Not a status report. Things your engineers can use and your auditor can accept.</p>
+        </div>
+
+        <div class="deliverables">
+
+          <article class="deliverable">
+            <div class="del-num mono">01</div>
+            <h3>Modernized codebase</h3>
+            <p>Your application on current LTS — typically Java 21 and Spring Boot 3.5+. Jakarta EE migrated. Hibernate updated. Test suite green. CI passing. Running in your environment, not a sandbox.</p>
+            <ul class="del-checks">
+              <li>All direct and transitive dependencies on supported versions</li>
+              <li>Jakarta namespace migrated (<span class="mono">javax.* → jakarta.*</span>)</li>
+              <li>Deprecated APIs replaced, not suppressed</li>
+              <li>Test suite passing, coverage maintained or improved</li>
+            </ul>
+          </article>
+
+          <article class="deliverable">
+            <div class="del-num mono">02</div>
+            <h3>Audit-ready evidence pack</h3>
+            <p>The thing your CISO and your auditor actually want. A signed artifact bundle that maps every dependency to its provenance, vulnerability status, and upgrade justification. Walks into SOC 2, ISO 27001, HIPAA, and DORA audits without rework.</p>
+            <ul class="del-checks">
+              <li>SBOM in CycloneDX and SPDX formats</li>
+              <li>Full CVE reconciliation — what was present, what's resolved</li>
+              <li>Dependency provenance &amp; license inventory</li>
+              <li>Test evidence &amp; regression coverage report</li>
+            </ul>
+          </article>
+
+          <article class="deliverable">
+            <div class="del-num mono">03</div>
+            <h3>Migration runbook</h3>
+            <p>Documented so your team can do the next one. Every decision we made, every workaround, every "here's what to watch for." Your second migration costs you less than your first — with or without us.</p>
+            <ul class="del-checks">
+              <li>Step-by-step transformation log</li>
+              <li>Rollback procedure (tested, not theoretical)</li>
+              <li>Custom OpenRewrite recipes we authored for your codebase</li>
+              <li>Lessons learned &amp; patterns for your other services</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4 — HOW IT WORKS
+         ============================================================ -->
+    <section class="how how-migrate" id="how">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 03</span>
+            <span class="section-label">The engagement</span>
+          </div>
+          <h2 class="section-title">Three weeks. One application. No theatre.</h2>
+          <p class="section-lede">Standard engagement shape. Larger portfolios get phased plans, but the per-application rhythm is the same.</p>
+        </div>
+
+        <ol class="phases">
+
+          <li class="phase" data-phase="01">
+            <div class="phase-num">Week 01</div>
+            <div class="phase-body">
+              <h3>Audit &amp; plan</h3>
+              <p class="phase-sub">Read the code. Understand the load-bearing parts. Agree the target state.</p>
+              <ul class="phase-list">
+                <li>Deep dependency scan &amp; static analysis</li>
+                <li>Breaking-change inventory against target versions</li>
+                <li>Custom migration plan — sequenced, estimated, risk-rated</li>
+                <li>Written sign-off before any code changes</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="phase" data-phase="02">
+            <div class="phase-num">Week 02</div>
+            <div class="phase-body">
+              <h3>Migration</h3>
+              <p class="phase-sub">AI-accelerated refactor with senior human review on every change.</p>
+              <ul class="phase-list">
+                <li>OpenRewrite recipes applied for deterministic changes</li>
+                <li>AI-assisted handling of the long-tail custom code</li>
+                <li>Daily PR stream — you review what you want to review</li>
+                <li>Test suite preserved &amp; expanded where gaps exposed</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="phase" data-phase="03">
+            <div class="phase-num">Week 03</div>
+            <div class="phase-body">
+              <h3>Validation &amp; handover</h3>
+              <p class="phase-sub">Prove it works. Document it. Hand your team the keys.</p>
+              <ul class="phase-list">
+                <li>Full regression &amp; integration test runs</li>
+                <li>Staging deployment &amp; soak (your environment)</li>
+                <li>Evidence pack finalized &amp; signed</li>
+                <li>Knowledge-transfer session with your engineers</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+
+        <p class="phases-foot">
+          Timelines assume a single-service Spring Boot application of moderate complexity. Multi-module, monolith, or legacy Java EE engagements are scoped after the audit.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5 — WHY TWO ENGINEERS (VALUE SECTION, NO NAMES)
+         ============================================================ -->
+    <section class="why-us">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-copy">
+            <div class="section-mark">
+              <span class="mono">§ 04</span>
+              <span class="section-label">Why this model works</span>
+            </div>
+            <h2 class="section-title">Why two engineers instead of thirty consultants.</h2>
+
+            <p class="why-para">
+              Modern Java migration isn't a headcount problem anymore. The hard parts — reading a decade-old Spring codebase, understanding what's load-bearing, fixing the tests that break when Hibernate changes majors, producing evidence a CISO can sign off on — require senior judgment, not bodies.
+            </p>
+
+            <p class="why-para">
+              We're two engineers with <strong>20+ years of combined enterprise Java experience</strong>. Deep in Spring, JPA, JVM internals, and Jakarta EE since before Java 8 was the new hotness. We've spent the last two years embedding AI into our delivery pipeline — OpenRewrite for deterministic transforms, Claude Code and Amazon Q for the custom-code long tail, our own agents for test generation and dependency provenance.
+            </p>
+
+            <p class="why-para">
+              The result: <em>what a thirty-person consultancy ships in nine months, we ship in three to five weeks</em>. One point of contact. Zero handoffs. When something's wrong at 2am, you message the person who wrote the migration — not a ticket queue.
+            </p>
+
+            <div class="why-trade">
+              <div class="trade-mark mono">Note</div>
+              <p>We take one to three engagements at a time. Deliberately. If we're booked, we'll say so — and refer you to someone credible.</p>
+            </div>
+          </div>
+
+          <div class="why-proof">
+            <h3 class="proof-title">What this gets you</h3>
+            <ul class="proof-list">
+              <li>
+                <span class="proof-label mono">Speed</span>
+                <span class="proof-val">3–5 weeks per application vs 6–9 months at a big-four consultancy</span>
+              </li>
+              <li>
+                <span class="proof-label mono">Depth</span>
+                <span class="proof-val">Senior engineers reading every diff — no junior resources pattern-matching from Stack Overflow</span>
+              </li>
+              <li>
+                <span class="proof-label mono">Accountability</span>
+                <span class="proof-val">Fixed price, fixed date. Overrun is our problem, not your budget line.</span>
+              </li>
+              <li>
+                <span class="proof-label mono">Leverage</span>
+                <span class="proof-val">Your engineers stay on the product roadmap. We handle the upgrade grind.</span>
+              </li>
+              <li>
+                <span class="proof-label mono">Transfer</span>
+                <span class="proof-val">Runbook and recipes you keep — not vendor lock-in</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 6 — INVESTMENT (no prices)
+         ============================================================ -->
+    <section class="invest" id="invest">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 05</span>
+            <span class="section-label">Investment</span>
+          </div>
+          <h2 class="section-title">Fixed-price. Scoped after a free audit.</h2>
+          <p class="section-lede">Every engagement is priced after we read your codebase — not from a generic rate card. The audit is free. The scope is transparent. The number is fixed before we start.</p>
+        </div>
+
+        <div class="bands">
+
+          <article class="band">
+            <header class="band-head">
+              <h3 class="band-name">Single application</h3>
+              <p class="band-for">One Spring Boot or Java service. Typical case.</p>
+            </header>
+            <div class="band-detail">
+              <div class="band-row">
+                <span class="band-key mono">Timeline</span>
+                <span class="band-val">2–5 weeks</span>
+              </div>
+              <div class="band-row">
+                <span class="band-key mono">Scope</span>
+                <span class="band-val">Java version + framework + dependencies + tests + evidence pack</span>
+              </div>
+              <div class="band-row">
+                <span class="band-key mono">Price</span>
+                <span class="band-val">Fixed, confirmed after audit</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="band band-featured">
+            <div class="band-badge">Most engagements</div>
+            <header class="band-head">
+              <h3 class="band-name">Portfolio program</h3>
+              <p class="band-for">5 to 20 applications. Phased delivery. Shared patterns compound across services.</p>
+            </header>
+            <div class="band-detail">
+              <div class="band-row">
+                <span class="band-key mono">Timeline</span>
+                <span class="band-val">2–6 months</span>
+              </div>
+              <div class="band-row">
+                <span class="band-key mono">Scope</span>
+                <span class="band-val">Sequenced migrations + reusable recipes + team enablement</span>
+              </div>
+              <div class="band-row">
+                <span class="band-key mono">Price</span>
+                <span class="band-val">Per-application pricing, volume-discounted</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="band">
+            <header class="band-head">
+              <h3 class="band-name">Managed modernization</h3>
+              <p class="band-for">Ongoing. Keep the stack current so you never face another forced migration.</p>
+            </header>
+            <div class="band-detail">
+              <div class="band-row">
+                <span class="band-key mono">Timeline</span>
+                <span class="band-val">Retainer, quarterly reviews</span>
+              </div>
+              <div class="band-row">
+                <span class="band-key mono">Scope</span>
+                <span class="band-val">Continuous dependency currency, CVE patching, version tracking</span>
+              </div>
+              <div class="band-row">
+                <span class="band-key mono">Price</span>
+                <span class="band-val">Monthly retainer, scoped to portfolio size</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="invest-foot">
+          Every engagement is fixed-price. If we miss the agreed timeline, the overrun is on us — not your budget line.
+        </p>
+
+        <div class="invest-cta">
+          <a href="#audit" class="btn btn-primary btn-lg">
+            Request a free audit to scope yours
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 7 — WHEN TO USE US / WHEN NOT (COMPETITIVE HONESTY)
+         ============================================================ -->
+    <section class="compare" id="compare">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 06</span>
+            <span class="section-label">Honest positioning</span>
+          </div>
+          <h2 class="section-title">When to use us — and when to use someone else.</h2>
+          <p class="section-lede">Every serious buyer asks "why you and not <em>X</em>?" Here's the honest answer.</p>
+        </div>
+
+        <div class="compare-grid">
+
+          <article class="comp-card">
+            <div class="comp-head">
+              <span class="comp-tool mono">Amazon Q Developer</span>
+              <span class="comp-verdict">Use them if</span>
+            </div>
+            <p>You're on AWS, have senior Java engineers in-house who can drive the tool, and are comfortable reviewing every generated change. It's included in your AWS spend. Genuinely excellent for teams who have the expertise to direct it.</p>
+            <div class="comp-gap">
+              <span class="gap-label mono">Gap we fill</span>
+              <span>You don't have a senior engineer to spare for three weeks — or you're not AWS-native.</span>
+            </div>
+          </article>
+
+          <article class="comp-card">
+            <div class="comp-head">
+              <span class="comp-tool mono">Moderne / OpenRewrite</span>
+              <span class="comp-verdict">Use them if</span>
+            </div>
+            <p>You're migrating hundreds or thousands of repos simultaneously across a large platform-engineering organization. Best-in-class multi-repo orchestration and recipe catalogue. We use their open-source engine under the hood ourselves.</p>
+            <div class="comp-gap">
+              <span class="gap-label mono">Gap we fill</span>
+              <span>You have 1–20 applications and no dedicated platform team to wield the tooling.</span>
+            </div>
+          </article>
+
+          <article class="comp-card">
+            <div class="comp-head">
+              <span class="comp-tool mono">Accenture / Infosys / TCS</span>
+              <span class="comp-verdict">Use them if</span>
+            </div>
+            <p>You need thirty engineers on-site for a nine-month program with formal change-management, RFP procurement, and org-wide coordination. Entirely legitimate for programs at that scale.</p>
+            <div class="comp-gap">
+              <span class="gap-label mono">Gap we fill</span>
+              <span>You want modernization in weeks not quarters, without the consultancy overhead and layered billing.</span>
+            </div>
+          </article>
+
+          <article class="comp-card comp-card-us">
+            <div class="comp-head">
+              <span class="comp-tool mono">Cloud Agent IQ</span>
+              <span class="comp-verdict us-verdict">Use us if</span>
+            </div>
+            <p>You have 1 to 20 applications, need them modernized in weeks, and want two senior engineers who own it end-to-end. You want fixed price, fixed date, audit-ready evidence, and your team staying on the product roadmap.</p>
+            <div class="comp-gap">
+              <span class="gap-label mono">Our specialty</span>
+              <span>End-to-end accountability for mid-size Java portfolios — from audit to handover, with evidence your CISO and auditor accept.</span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="compare-foot">
+          If you're not sure which category you're in, request an audit. We'll tell you honestly — including "you don't need us."
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 8 — FAQ
+         ============================================================ -->
+    <section class="faq" id="faq">
+      <div class="container faq-container">
+        <div class="section-mark">
+          <span class="mono">§ 07</span>
+          <span class="section-label">Real objections, real answers</span>
+        </div>
+        <h2 class="section-title">Questions technical buyers actually ask.</h2>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>What if you take longer than the agreed timeline?</summary>
+            <p>Overrun is our problem, not your budget line. If we miss the committed date, we continue at our cost until the migration is complete. We price in contingency — you don't pay for ours.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if you break production?</summary>
+            <p>Migration work lands on a branch that only merges after your team approves every change. We test in your staging environment, not ours. The engagement includes a tested rollback procedure — if something's wrong post-deploy, you're never trapped on the new version. We've never broken production. We don't plan to start.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Why not just use our in-house engineers?</summary>
+            <p>You can. Most of our clients could. The tradeoff is opportunity cost — a senior engineer spending three weeks on dependency upgrades is three weeks not spent on the roadmap. If the business cost of the delayed roadmap exceeds our fee, we're a buy. If not, you're right to do it internally.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you keep our source code?</summary>
+            <p>No. Engagement is bound by an MSA with an NDA. Source access is revoked at handover. We don't retain copies. Any reusable tooling we build (custom OpenRewrite recipes, scripts) is handed to you with the runbook — we may abstract patterns for our own methodology, but never with your code.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does AI factor into your delivery?</summary>
+            <p>We use deterministic tools (OpenRewrite) for 70–80% of the transformation — rules-based, reviewable, no guesswork. AI assistants (Claude Code, Amazon Q, custom agents) handle the long tail of custom code that rules can't cover. Every AI-generated change is reviewed by a senior engineer before it lands. No "trust the model" — we trust the diff.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What's actually in the free audit?</summary>
+            <p>You send us read access to a repository (or a <span class="mono">pom.xml</span> / <span class="mono">build.gradle</span> if that's easier). We spend 2 hours scanning dependencies, CVEs, EOL exposure, and breaking-change risk against current LTS. You get a written report: findings, risk-rated, with a fixed-price quote if you want us to do the migration. No pitch deck, no obligation.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you do non-Java stacks?</summary>
+            <p>Not yet. We're deliberately narrow while we're two people — Java, Spring, JVM, Jakarta. Node, .NET, Python, Go migrations are in our roadmap but not our current offering. If you need one of those, we'll refer you to someone we trust.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do we start?</summary>
+            <p>Request an audit below. We'll be in touch within one business day with what we need to start. Audit itself takes 2–3 working days to deliver.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 9 — CTA / AUDIT FORM
+         ============================================================ -->
+    <section class="cta cta-migrate" id="audit">
+      <div class="container cta-inner">
+        <div class="cta-bg" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <radialGradient id="ctaGlow-m" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" stop-color="#E8704A" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#E8704A" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="600" cy="200" r="400" fill="url(#ctaGlow-m)"/>
+          </svg>
+        </div>
+
+        <h2 class="cta-title">Request a free stack audit.</h2>
+        <p class="cta-lede">Two hours of senior time. Written report. Fixed-price quote if you want the migration. No pitch deck, no obligation.</p>
+
+        <form class="audit-form" id="audit-form" onsubmit="return handleAuditSubmit(event);">
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-label">Company</span>
+              <input type="text" name="company" required autocomplete="organization" placeholder="Acme Corp" />
+            </label>
+            <label class="form-field">
+              <span class="form-label">Your role</span>
+              <input type="text" name="role" required placeholder="VP Engineering, CTO, Tech Lead…" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="form-field">
+              <span class="form-label">Work email</span>
+              <input type="email" name="email" required autocomplete="email" placeholder="you@company.com" />
+            </label>
+            <label class="form-field">
+              <span class="form-label">Repo URL or <span class="mono">pom.xml</span> (optional)</span>
+              <input type="text" name="repo" placeholder="github.com/acme/service or we'll ask later" />
+            </label>
+          </div>
+          <label class="form-field form-field-full">
+            <span class="form-label">What's the urgency? (optional)</span>
+            <textarea name="context" rows="3" placeholder="e.g. MAS audit in Q3, planning a cloud migration, CVE remediation deadline…"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-lg">
+              Send audit request
+              <span class="arrow" aria-hidden="true">→</span>
+            </button>
+            <span class="form-note mono">
+              or email <a href="mailto:hello@cloudagentiq.com">hello@cloudagentiq.com</a>
+            </span>
+          </div>
+
+          <p class="form-privacy">
+            We reply within one business day. We don't add you to any list. We don't share your information. NDA available on request before you send any code.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+              <circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="1.25"/>
+              <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Cloud Agent IQ</span>
+          </span>
+        </div>
+        <p class="footer-tag">Migration engineering for the operator age.</p>
+        <p class="footer-address mono">hello@cloudagentiq.com</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="#forcing">Deadlines</a></li>
+            <li><a href="#what">What you get</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#invest">Investment</a></li>
+            <li><a href="#compare">Vs alternatives</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Stack</h4>
+          <ul>
+            <li>Java 8/11/17 → 21</li>
+            <li>Spring Boot 2.x → 3.x</li>
+            <li>Jakarta EE migration</li>
+            <li>Hibernate 5 → 7</li>
+            <li>Security &amp; CVE audits</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Trust</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li>NDA on request</li>
+            <li>Source code policy</li>
+            <li>No retention</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="./">Cloud Agent IQ home</a></li>
+            <li><a href="mailto:hello@cloudagentiq.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="mono">© 2026 Cloud Agent IQ. Migration engineering, done honestly.</span>
+        <span class="mono">v1.0 · <a href="./">back to main site</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script>
+    // Basic audit form handler (placeholder until real backend is wired)
+    function handleAuditSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = Object.fromEntries(new FormData(form));
+      const body = encodeURIComponent(
+        `Company: ${data.company}\nRole: ${data.role}\nEmail: ${data.email}\nRepo: ${data.repo || '(not provided)'}\n\nContext:\n${data.context || '(none)'}`
+      );
+      const subject = encodeURIComponent(`Free audit request — ${data.company}`);
+      window.location.href = `mailto:hello@cloudagentiq.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
+</html>
