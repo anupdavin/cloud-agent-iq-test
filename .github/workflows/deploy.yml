@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Verify required files exist
         run: |
@@ -108,7 +108,7 @@ jobs:
     needs: preflight
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Prepare site directory
         run: |
@@ -141,6 +141,11 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          # Auto-enable Pages on first run so manual settings clicks aren't required.
+          # Needs the token to have admin:write on the repo, which our workflow token does
+          # by default via GITHUB_TOKEN with pages:write permission declared above.
+          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
