@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cloud Agent IQ — Autonomous AI agents that run the operational core of modern business. Sales, support, finance, ops, and analytics, handled." />
+  <meta name="theme-color" content="#0A0907" />
+  <meta name="author" content="Cloud Agent IQ" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <link rel="canonical" href="https://cloudagentiq.com/" />
+  <title>Cloud Agent IQ — The intelligence layer for modern business</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Cloud Agent IQ" />
+  <meta property="og:title" content="Cloud Agent IQ — The intelligence layer for modern business" />
+  <meta property="og:description" content="Deploy a team of autonomous AI agents across your stack — sales, support, finance, operations — and run them like a 24/7 back office." />
+  <meta property="og:url" content="https://cloudagentiq.com/" />
+  <meta property="og:image" content="https://cloudagentiq.com/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cloud Agent IQ — autonomous AI agents for modern business" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cloud Agent IQ — The intelligence layer for modern business" />
+  <meta name="twitter:description" content="Deploy a team of autonomous AI agents across your stack. Fewer tools. Fewer handoffs. More done." />
+  <meta name="twitter:image" content="https://cloudagentiq.com/og-image.svg" />
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cloud Agent IQ",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Cloud",
+    "description": "Autonomous AI agents that run the operational core of modern business — sales, support, finance, operations, and analytics.",
+    "url": "https://cloudagentiq.com/",
+    "offers": [
+      { "@type": "Offer", "name": "Starter", "price": "490", "priceCurrency": "USD", "description": "For teams deploying their first agent." },
+      { "@type": "Offer", "name": "Scale", "price": "2400", "priceCurrency": "USD", "description": "For growing operators running the business on agents." },
+      { "@type": "Offer", "name": "Enterprise", "description": "Custom pricing for regulated industries and large footprints." }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Grain overlay for texture -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Cloud Agent IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+            <circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="1.25"/>
+            <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+            <circle cx="16" cy="2" r="1.5" fill="currentColor"/>
+            <circle cx="30" cy="16" r="1.5" fill="currentColor"/>
+            <circle cx="16" cy="30" r="1.5" fill="currentColor"/>
+            <circle cx="2" cy="16" r="1.5" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Cloud Agent IQ</span>
+          <span class="brand-sub">Autonomous Operations</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#platform">Platform</a>
+        <a href="#agents">Agents</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#login" class="btn btn-ghost">Log in</a>
+        <a href="#demo" class="btn btn-primary">Book a demo <span aria-hidden="true">↗</span></a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav aria-label="Mobile">
+        <a href="#platform">Platform</a>
+        <a href="#agents">Agents</a>
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+        <a href="#login">Log in</a>
+      </nav>
+      <a href="#demo" class="btn btn-primary btn-block btn-lg">Book a demo <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-orbits" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#E8704A" stop-opacity="0.35"/>
+              <stop offset="60%" stop-color="#E8704A" stop-opacity="0.05"/>
+              <stop offset="100%" stop-color="#E8704A" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="900" cy="400" r="500" fill="url(#glow)"/>
+          <g stroke="#E8704A" stroke-width="1" fill="none" opacity="0.18">
+            <ellipse cx="900" cy="400" rx="320" ry="110"/>
+            <ellipse cx="900" cy="400" rx="420" ry="150" transform="rotate(20 900 400)"/>
+            <ellipse cx="900" cy="400" rx="520" ry="190" transform="rotate(-15 900 400)"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            <span>v4.2 · Operator Release</span>
+            <span class="divider">/</span>
+            <span>Now with multi-agent orchestration</span>
+          </div>
+
+          <h1 class="hero-title">
+            The intelligence layer<br/>
+            for <em>modern</em> business.
+          </h1>
+
+          <p class="hero-lede">
+            Cloud Agent IQ deploys a team of autonomous AI agents across your stack — sales, support, finance, operations — and runs them like a 24/7 back office. Fewer tools. Fewer handoffs. More done.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#demo" class="btn btn-primary btn-lg">
+              Book a demo
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="#platform" class="btn btn-ghost btn-lg">
+              See the platform
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-num">42k+</span>
+              <span class="meta-label">agents deployed</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-num">99.98%</span>
+              <span class="meta-label">uptime SLA</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-num">SOC&nbsp;2</span>
+              <span class="meta-label">Type II certified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Widget: Live agent panel -->
+        <aside class="hero-panel" aria-label="Live agent status">
+          <div class="panel-header">
+            <div class="panel-title">
+              <span class="pulse"></span>
+              Operator Console
+            </div>
+            <div class="panel-tabs">
+              <span class="tab active">Live</span>
+              <span class="tab">Queue</span>
+              <span class="tab">Logs</span>
+            </div>
+          </div>
+
+          <div class="panel-body">
+            <div class="agent-row" style="--i:0">
+              <div class="agent-mark" data-color="ember">SL</div>
+              <div class="agent-info">
+                <div class="agent-name">Sloane · Sales Ops</div>
+                <div class="agent-action">Enriched 214 leads from Clearbit → HubSpot</div>
+              </div>
+              <div class="agent-status">
+                <span class="status-dot running"></span>
+                <span class="status-text">running</span>
+              </div>
+            </div>
+
+            <div class="agent-row" style="--i:1">
+              <div class="agent-mark" data-color="gold">AR</div>
+              <div class="agent-info">
+                <div class="agent-name">Ari · Finance</div>
+                <div class="agent-action">Reconciled 1,402 transactions · flagged 3</div>
+              </div>
+              <div class="agent-status">
+                <span class="status-dot running"></span>
+                <span class="status-text">running</span>
+              </div>
+            </div>
+
+            <div class="agent-row" style="--i:2">
+              <div class="agent-mark" data-color="sage">MI</div>
+              <div class="agent-info">
+                <div class="agent-name">Mira · Support</div>
+                <div class="agent-action">Resolved 38 tier-1 tickets · CSAT 96%</div>
+              </div>
+              <div class="agent-status">
+                <span class="status-dot running"></span>
+                <span class="status-text">running</span>
+              </div>
+            </div>
+
+            <div class="agent-row" style="--i:3">
+              <div class="agent-mark" data-color="ember">KA</div>
+              <div class="agent-info">
+                <div class="agent-name">Kai · Operations</div>
+                <div class="agent-action">Scheduled 62 shifts · sent 4 escalations</div>
+              </div>
+              <div class="agent-status">
+                <span class="status-dot idle"></span>
+                <span class="status-text">idle</span>
+              </div>
+            </div>
+
+            <div class="agent-row" style="--i:4">
+              <div class="agent-mark" data-color="gold">NE</div>
+              <div class="agent-info">
+                <div class="agent-name">Nell · Analytics</div>
+                <div class="agent-action">Compiled weekly exec briefing (7 sources)</div>
+              </div>
+              <div class="agent-status">
+                <span class="status-dot running"></span>
+                <span class="status-text">running</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-footer">
+            <span class="mono">$ agents --active</span>
+            <span class="panel-count">5 running · 0 errors · last event 2s ago</span>
+          </div>
+        </aside>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Salesforce</span><span>·</span>
+          <span>HubSpot</span><span>·</span>
+          <span>Stripe</span><span>·</span>
+          <span>QuickBooks</span><span>·</span>
+          <span>Zendesk</span><span>·</span>
+          <span>Slack</span><span>·</span>
+          <span>Notion</span><span>·</span>
+          <span>Snowflake</span><span>·</span>
+          <span>Linear</span><span>·</span>
+          <span>NetSuite</span><span>·</span>
+          <span>Gmail</span><span>·</span>
+          <span>Workday</span><span>·</span>
+          <span>GitHub</span><span>·</span>
+          <span>Shopify</span><span>·</span>
+          <!-- duplicate for seamless loop -->
+          <span>Salesforce</span><span>·</span>
+          <span>HubSpot</span><span>·</span>
+          <span>Stripe</span><span>·</span>
+          <span>QuickBooks</span><span>·</span>
+          <span>Zendesk</span><span>·</span>
+          <span>Slack</span><span>·</span>
+          <span>Notion</span><span>·</span>
+          <span>Snowflake</span><span>·</span>
+          <span>Linear</span><span>·</span>
+          <span>NetSuite</span><span>·</span>
+          <span>Gmail</span><span>·</span>
+          <span>Workday</span><span>·</span>
+          <span>GitHub</span><span>·</span>
+          <span>Shopify</span><span>·</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL STATEMENT -->
+    <section class="statement" id="platform">
+      <div class="container">
+        <div class="section-mark">
+          <span class="mono">§ 01</span>
+          <span class="section-label">The thesis</span>
+        </div>
+        <h2 class="statement-title">
+          Businesses don't run on <span class="strike">software</span> <em>decisions</em>.
+          We built agents that make them — at the speed of your data.
+        </h2>
+        <div class="statement-grid">
+          <p>
+            For twenty years, SaaS asked humans to translate business judgment into forms, dashboards, and tickets. The tools multiplied. The decisions didn't move any faster.
+          </p>
+          <p>
+            Cloud Agent IQ flips the model. Each agent has a job title, a playbook, and authority to act. You connect your data sources, define guardrails, and the operational work gets done — overnight, at scale, with an audit trail.
+          </p>
+          <p>
+            This isn't a chatbot. It's a workforce.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENTS GRID -->
+    <section class="agents" id="agents">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 02</span>
+            <span class="section-label">The roster</span>
+          </div>
+          <h2 class="section-title">Meet the agents.</h2>
+          <p class="section-lede">Pre-trained for a specific business function. Customizable to your playbook. Deployed in under an hour.</p>
+        </div>
+
+        <div class="agent-grid">
+
+          <article class="agent-card" data-role="sales">
+            <div class="card-head">
+              <span class="card-mark ember">SL</span>
+              <span class="card-tag">Revenue</span>
+            </div>
+            <h3>Sloane</h3>
+            <p class="card-role">Sales Development</p>
+            <p class="card-desc">Enriches inbound leads, scores fit, drafts personalized outreach, and books meetings into your calendar. Works your CRM like a six-year SDR.</p>
+            <ul class="card-stack">
+              <li>Salesforce</li><li>HubSpot</li><li>Apollo</li><li>Gmail</li>
+            </ul>
+          </article>
+
+          <article class="agent-card" data-role="support">
+            <div class="card-head">
+              <span class="card-mark sage">MI</span>
+              <span class="card-tag">Customer</span>
+            </div>
+            <h3>Mira</h3>
+            <p class="card-role">Customer Support</p>
+            <p class="card-desc">Resolves tier-1 tickets end-to-end, escalates edge cases with full context, and writes the post-mortem. Learns from every macro in your inbox.</p>
+            <ul class="card-stack">
+              <li>Zendesk</li><li>Intercom</li><li>Front</li><li>Slack</li>
+            </ul>
+          </article>
+
+          <article class="agent-card" data-role="finance">
+            <div class="card-head">
+              <span class="card-mark gold">AR</span>
+              <span class="card-tag">Finance</span>
+            </div>
+            <h3>Ari</h3>
+            <p class="card-role">Finance Operations</p>
+            <p class="card-desc">Reconciles ledgers, flags anomalies, chases invoices, and closes the books on schedule. Your controller will sleep again.</p>
+            <ul class="card-stack">
+              <li>QuickBooks</li><li>NetSuite</li><li>Stripe</li><li>Ramp</li>
+            </ul>
+          </article>
+
+          <article class="agent-card" data-role="ops">
+            <div class="card-head">
+              <span class="card-mark ember">KA</span>
+              <span class="card-tag">Operations</span>
+            </div>
+            <h3>Kai</h3>
+            <p class="card-role">Operations</p>
+            <p class="card-desc">Runs scheduling, inventory, vendor ops, and SLA monitoring. Escalates when the model can't — with every receipt attached.</p>
+            <ul class="card-stack">
+              <li>Notion</li><li>Asana</li><li>Linear</li><li>Airtable</li>
+            </ul>
+          </article>
+
+          <article class="agent-card" data-role="analytics">
+            <div class="card-head">
+              <span class="card-mark gold">NE</span>
+              <span class="card-tag">Intelligence</span>
+            </div>
+            <h3>Nell</h3>
+            <p class="card-role">Analytics & Insights</p>
+            <p class="card-desc">Writes the weekly exec briefing. Answers ad-hoc questions in plain English against your warehouse. Shows its SQL.</p>
+            <ul class="card-stack">
+              <li>Snowflake</li><li>BigQuery</li><li>dbt</li><li>Looker</li>
+            </ul>
+          </article>
+
+          <article class="agent-card" data-role="marketing">
+            <div class="card-head">
+              <span class="card-mark sage">RO</span>
+              <span class="card-tag">Growth</span>
+            </div>
+            <h3>Romy</h3>
+            <p class="card-role">Marketing</p>
+            <p class="card-desc">Drafts campaigns, writes SEO briefs, tunes ad budgets against pipeline, reports weekly. Stops you shipping mediocre email.</p>
+            <ul class="card-stack">
+              <li>HubSpot</li><li>Google Ads</li><li>Webflow</li><li>Customer.io</li>
+            </ul>
+          </article>
+
+          <article class="agent-card" data-role="compliance">
+            <div class="card-head">
+              <span class="card-mark ember">IV</span>
+              <span class="card-tag">Risk</span>
+            </div>
+            <h3>Iver</h3>
+            <p class="card-role">Compliance & Audit</p>
+            <p class="card-desc">Maintains your SOC 2 evidence room. Monitors access logs. Surfaces risk before the auditor does.</p>
+            <ul class="card-stack">
+              <li>Vanta</li><li>AWS</li><li>Okta</li><li>GitHub</li>
+            </ul>
+          </article>
+
+          <article class="agent-card" data-role="recruiting">
+            <div class="card-head">
+              <span class="card-mark gold">TH</span>
+              <span class="card-tag">People</span>
+            </div>
+            <h3>Thea</h3>
+            <p class="card-role">Recruiting</p>
+            <p class="card-desc">Sources candidates, screens resumes against role rubrics, schedules interviews, and files the feedback. Never ghosts a candidate.</p>
+            <ul class="card-stack">
+              <li>Greenhouse</li><li>Ashby</li><li>LinkedIn</li><li>Gmail</li>
+            </ul>
+          </article>
+
+          <article class="agent-card agent-card-custom">
+            <div class="card-head">
+              <span class="card-mark custom">+</span>
+              <span class="card-tag">Custom</span>
+            </div>
+            <h3>Build your own</h3>
+            <p class="card-role">Agent SDK</p>
+            <p class="card-desc">Define the job, connect the tools, write the playbook. Ship a custom agent with typed actions, evals, and full observability — in an afternoon.</p>
+            <ul class="card-stack">
+              <li>TypeScript</li><li>Python</li><li>MCP</li><li>Webhooks</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 03</span>
+            <span class="section-label">Architecture</span>
+          </div>
+          <h2 class="section-title">How it actually works.</h2>
+          <p class="section-lede">Four layers. One control plane. Zero "AI magic" handwaving.</p>
+        </div>
+
+        <div class="how-layout">
+
+          <ol class="how-steps">
+            <li class="step" data-step="01">
+              <div class="step-num">01</div>
+              <div class="step-body">
+                <h3>Connect your stack</h3>
+                <p>OAuth into the tools you already use. 200+ native connectors — CRM, finance, support, warehouse, comms, code. Bring custom APIs via MCP.</p>
+              </div>
+            </li>
+            <li class="step" data-step="02">
+              <div class="step-num">02</div>
+              <div class="step-body">
+                <h3>Hire your agents</h3>
+                <p>Pick from the roster. Each agent comes with a default playbook you can edit in plain English, or rewrite in code if you want precision.</p>
+              </div>
+            </li>
+            <li class="step" data-step="03">
+              <div class="step-num">03</div>
+              <div class="step-body">
+                <h3>Set guardrails</h3>
+                <p>Scope authority, approval thresholds, spend caps, data boundaries. Everything an agent does is logged, diff-able, and revocable.</p>
+              </div>
+            </li>
+            <li class="step" data-step="04">
+              <div class="step-num">04</div>
+              <div class="step-body">
+                <h3>Ship. Then tune.</h3>
+                <p>Agents go live and start producing. Weekly eval reports show what they got right, what they escalated, what to tighten. Humans stay in the loop that matters.</p>
+              </div>
+            </li>
+          </ol>
+
+          <!-- Architecture diagram -->
+          <figure class="arch-diagram" aria-label="Cloud Agent IQ architecture diagram">
+            <svg viewBox="0 0 520 560" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="dots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+                  <circle cx="1" cy="1" r="1" fill="#E8704A" opacity="0.18"/>
+                </pattern>
+                <linearGradient id="coreGrad" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#E8704A"/>
+                  <stop offset="100%" stop-color="#B2512E"/>
+                </linearGradient>
+              </defs>
+              <rect width="520" height="560" fill="url(#dots)"/>
+
+              <!-- Layer: Data sources (top) -->
+              <g class="arch-layer">
+                <text x="20" y="32" class="arch-label">LAYER 01 · DATA SOURCES</text>
+                <g class="arch-node"><rect x="20" y="48" width="100" height="48" rx="6"/><text x="70" y="77" class="arch-node-text">CRM</text></g>
+                <g class="arch-node"><rect x="136" y="48" width="100" height="48" rx="6"/><text x="186" y="77" class="arch-node-text">Finance</text></g>
+                <g class="arch-node"><rect x="252" y="48" width="100" height="48" rx="6"/><text x="302" y="77" class="arch-node-text">Comms</text></g>
+                <g class="arch-node"><rect x="368" y="48" width="132" height="48" rx="6"/><text x="434" y="77" class="arch-node-text">Warehouse</text></g>
+              </g>
+
+              <!-- Connecting lines to orchestrator -->
+              <g stroke="#E8704A" stroke-width="1" fill="none" opacity="0.35">
+                <path d="M70 96 Q70 150 260 180"/>
+                <path d="M186 96 Q186 150 260 180"/>
+                <path d="M302 96 Q302 150 260 180"/>
+                <path d="M434 96 Q434 150 260 180"/>
+              </g>
+
+              <!-- Layer: Orchestrator -->
+              <g class="arch-layer">
+                <text x="20" y="170" class="arch-label">LAYER 02 · ORCHESTRATOR</text>
+                <rect x="60" y="186" width="400" height="72" rx="8" fill="url(#coreGrad)" opacity="0.92"/>
+                <text x="260" y="218" class="arch-core-title">Agent IQ Core</text>
+                <text x="260" y="240" class="arch-core-sub">routing · memory · evals · audit</text>
+              </g>
+
+              <!-- Connecting lines to agents -->
+              <g stroke="#E8704A" stroke-width="1" fill="none" opacity="0.35">
+                <path d="M120 258 Q120 290 110 320"/>
+                <path d="M210 258 Q210 290 220 320"/>
+                <path d="M310 258 Q310 290 320 320"/>
+                <path d="M400 258 Q400 290 430 320"/>
+              </g>
+
+              <!-- Layer: Agents -->
+              <g class="arch-layer">
+                <text x="20" y="310" class="arch-label">LAYER 03 · AGENTS</text>
+                <g class="arch-agent" data-i="0"><circle cx="110" cy="352" r="30"/><text x="110" y="358" class="arch-node-text">Sloane</text></g>
+                <g class="arch-agent" data-i="1"><circle cx="220" cy="352" r="30"/><text x="220" y="358" class="arch-node-text">Ari</text></g>
+                <g class="arch-agent" data-i="2"><circle cx="320" cy="352" r="30"/><text x="320" y="358" class="arch-node-text">Mira</text></g>
+                <g class="arch-agent" data-i="3"><circle cx="430" cy="352" r="30"/><text x="430" y="358" class="arch-node-text">Nell</text></g>
+              </g>
+
+              <!-- Connecting lines to control plane -->
+              <g stroke="#E8704A" stroke-width="1" fill="none" opacity="0.35">
+                <path d="M110 382 Q110 420 150 450"/>
+                <path d="M220 382 Q220 420 230 450"/>
+                <path d="M320 382 Q320 420 310 450"/>
+                <path d="M430 382 Q430 420 390 450"/>
+              </g>
+
+              <!-- Layer: Control plane -->
+              <g class="arch-layer">
+                <text x="20" y="440" class="arch-label">LAYER 04 · CONTROL PLANE</text>
+                <rect x="60" y="456" width="120" height="48" rx="6" class="arch-ctrl"/><text x="120" y="485" class="arch-node-text">Guardrails</text>
+                <rect x="196" y="456" width="128" height="48" rx="6" class="arch-ctrl"/><text x="260" y="485" class="arch-node-text">Observability</text>
+                <rect x="340" y="456" width="120" height="48" rx="6" class="arch-ctrl"/><text x="400" y="485" class="arch-node-text">Human-in-loop</text>
+              </g>
+
+              <text x="260" y="540" class="arch-caption">cloudagentiq.com · every action logged · every decision diff-able</text>
+            </svg>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS BAND -->
+    <section class="metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric">
+            <div class="metric-value">
+              <span class="metric-num" data-count="73">73</span>
+              <span class="metric-unit">%</span>
+            </div>
+            <div class="metric-label">reduction in manual back-office hours</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">
+              <span class="metric-num" data-count="4.1">4.1</span>
+              <span class="metric-unit">×</span>
+            </div>
+            <div class="metric-label">faster month-end close, on average</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">
+              <span class="metric-num" data-count="96">96</span>
+              <span class="metric-unit">%</span>
+            </div>
+            <div class="metric-label">tier-1 support resolved without escalation</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">
+              <span class="metric-num" data-count="11">11</span>
+              <span class="metric-unit">min</span>
+            </div>
+            <div class="metric-label">median time from signup to first live agent</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="cases">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 04</span>
+            <span class="section-label">In the wild</span>
+          </div>
+          <h2 class="section-title">What teams are doing with it.</h2>
+        </div>
+
+        <div class="cases-grid">
+          <article class="case-card">
+            <div class="case-industry">Series B SaaS</div>
+            <blockquote>
+              "Sloane handles our entire inbound lead pipe. Our AEs only see opportunities that passed a five-point qualification. We shut down our SDR BPO contract in month two."
+            </blockquote>
+            <div class="case-attribution">
+              <span class="case-role">VP Sales</span>
+              <span class="case-result">+ $4.2M influenced pipeline, Q3</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-industry">Healthcare, 400+ employees</div>
+            <blockquote>
+              "Ari closes the books in six days instead of nineteen. She flags the three weird invoices, the controller approves, done. That's it. That's the month-end."
+            </blockquote>
+            <div class="case-attribution">
+              <span class="case-role">CFO</span>
+              <span class="case-result">− 68% close cycle time</span>
+            </div>
+          </article>
+
+          <article class="case-card">
+            <div class="case-industry">E-commerce, 8-figure GMV</div>
+            <blockquote>
+              "Mira resolves 94% of tier-1 with better CSAT than our offshore team. We re-deployed our humans onto VIP accounts. Everyone wins except the old ticket backlog."
+            </blockquote>
+            <div class="case-attribution">
+              <span class="case-role">Head of CX</span>
+              <span class="case-result">24/7 first-response in under 40s</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">
+            <span class="mono">§ 05</span>
+            <span class="section-label">Pricing</span>
+          </div>
+          <h2 class="section-title">Priced by outcomes, not seats.</h2>
+          <p class="section-lede">Start with one agent. Add more as they pay for themselves.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <article class="tier">
+            <header class="tier-head">
+              <h3 class="tier-name">Starter</h3>
+              <p class="tier-for">For teams deploying their first agent.</p>
+            </header>
+            <div class="tier-price">
+              <span class="price-num">$490</span>
+              <span class="price-unit">/ agent / month</span>
+            </div>
+            <a href="#demo" class="btn btn-outline btn-block">Start free trial</a>
+            <ul class="tier-features">
+              <li>1–3 agents, any role</li>
+              <li>20 native connectors</li>
+              <li>10k actions / month</li>
+              <li>Weekly eval reports</li>
+              <li>Email support</li>
+            </ul>
+          </article>
+
+          <article class="tier tier-featured">
+            <div class="tier-badge">Most adopted</div>
+            <header class="tier-head">
+              <h3 class="tier-name">Scale</h3>
+              <p class="tier-for">For growing operators running the business on agents.</p>
+            </header>
+            <div class="tier-price">
+              <span class="price-num">$2,400</span>
+              <span class="price-unit">/ month, up to 8 agents</span>
+            </div>
+            <a href="#demo" class="btn btn-primary btn-block">Book a demo</a>
+            <ul class="tier-features">
+              <li>Up to 8 agents, any role</li>
+              <li>All 200+ connectors · MCP bridge</li>
+              <li>100k actions / month</li>
+              <li>Custom playbooks & evals</li>
+              <li>SSO · audit log · RBAC</li>
+              <li>Priority support · shared Slack</li>
+            </ul>
+          </article>
+
+          <article class="tier">
+            <header class="tier-head">
+              <h3 class="tier-name">Enterprise</h3>
+              <p class="tier-for">For regulated industries and large footprints.</p>
+            </header>
+            <div class="tier-price">
+              <span class="price-num">Custom</span>
+              <span class="price-unit">volume pricing</span>
+            </div>
+            <a href="#demo" class="btn btn-outline btn-block">Talk to sales</a>
+            <ul class="tier-features">
+              <li>Unlimited agents</li>
+              <li>Private cloud / VPC deploy</li>
+              <li>HIPAA · SOC 2 Type II · ISO 27001</li>
+              <li>Custom SLAs & data residency</li>
+              <li>Dedicated solutions engineer</li>
+              <li>24/7 on-call</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p class="pricing-foot">
+          Every plan includes full observability, unlimited humans-in-the-loop, and a 30-day replacement clause — if an agent underperforms a named baseline, we replace it or refund the month.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECURITY STRIP -->
+    <section class="security">
+      <div class="container">
+        <div class="security-grid">
+          <div class="security-copy">
+            <span class="mono section-mark-single">§ 06 · Trust</span>
+            <h2>Built for the CISO's approval, not just the operator's wishlist.</h2>
+            <p>Data stays yours. Every agent action is signed, logged, and reversible. Encryption at rest (AES-256) and in transit (TLS 1.3). SSO with SAML &amp; SCIM. Data residency in US, EU, or your own VPC.</p>
+          </div>
+          <ul class="badges">
+            <li><span class="badge-mark">◐</span>SOC 2 Type II</li>
+            <li><span class="badge-mark">◑</span>ISO 27001</li>
+            <li><span class="badge-mark">◒</span>HIPAA ready</li>
+            <li><span class="badge-mark">◓</span>GDPR &amp; DPF</li>
+            <li><span class="badge-mark">●</span>AES-256 + TLS 1.3</li>
+            <li><span class="badge-mark">○</span>SAML · SCIM · SSO</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container faq-container">
+        <div class="section-mark">
+          <span class="mono">§ 07</span>
+          <span class="section-label">Questions, fairly asked</span>
+        </div>
+        <h2 class="section-title">Things people actually want to know.</h2>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Is this just GPT with a nicer wrapper?</summary>
+            <p>No. Each agent runs on a purpose-built graph — a typed action layer, memory, an evaluator, and a guardrail engine — on top of the model of your choice (Claude, GPT, Llama, or a private model in your VPC). The model is a component. The system is the product.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What happens when an agent gets something wrong?</summary>
+            <p>Three things. It escalates with full context to the human owner you designated. It files the miss in the weekly eval report. And — depending on severity — it can auto-rollback its own action via a signed reversal. Every action is designed to be undoable.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long does it take to go live?</summary>
+            <p>Median is 11 minutes for a single agent on our default playbook. Complex deployments (VPC, custom connectors, multi-agent workflows) typically take 2–6 weeks with our solutions team.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you train on our data?</summary>
+            <p>Never. Your data stays in your tenant, encrypted with keys you control. We do not train foundation models on customer data, ever. You can review the DPA in the security portal.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can we build our own agents?</summary>
+            <p>Yes. The Agent SDK (TypeScript and Python) lets you define typed actions, connect arbitrary tools via MCP, and ship a custom agent with the same observability and guardrails as our first-party roster.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if we want to self-host?</summary>
+            <p>The Enterprise tier supports private cloud deployments into your AWS, GCP, or Azure account. The control plane runs entirely on your infrastructure; model traffic routes to the provider of your choice.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="demo">
+      <div class="container cta-inner">
+        <div class="cta-bg" aria-hidden="true">
+          <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <radialGradient id="ctaGlow" cx="50%" cy="50%" r="60%">
+                <stop offset="0%" stop-color="#E8704A" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#E8704A" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="600" cy="200" r="400" fill="url(#ctaGlow)"/>
+          </svg>
+        </div>
+        <h2 class="cta-title">Ready to put the back office on autopilot?</h2>
+        <p class="cta-lede">Thirty minutes with a solutions engineer. Walk away with a build plan and a go-live date.</p>
+        <div class="cta-actions">
+          <a href="#book" class="btn btn-primary btn-lg">
+            Book a demo
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#trial" class="btn btn-ghost btn-lg">
+            Start a 14-day trial
+          </a>
+        </div>
+        <p class="cta-foot mono">no credit card · deploy your first agent in under 15 minutes</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+              <circle cx="16" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="1.25"/>
+              <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Cloud Agent IQ</span>
+          </span>
+        </div>
+        <p class="footer-tag">The intelligence layer for modern business.</p>
+        <p class="footer-address mono">cloudagentiq.com · hello@cloudagentiq.com</p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#platform">Platform</a></li>
+            <li><a href="#agents">Agents</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="#docs">Documentation</a></li>
+            <li><a href="#">Agent SDK</a></li>
+            <li><a href="#">MCP bridge</a></li>
+            <li><a href="#">API reference</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press kit</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Trust</h4>
+          <ul>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">DPA</a></li>
+            <li><a href="#">Trust center</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span class="mono">© 2026 Cloud Agent IQ, Inc. Built for the operator age.</span>
+        <span class="mono">v4.2.0 · all systems operational <span class="status-dot running"></span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
