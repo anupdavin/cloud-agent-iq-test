@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="glow" cx="80%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#E8704A" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#E8704A" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#E8704A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#E8704A" stroke-width="0.5" opacity="0.07"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0A0907"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Orbit rings -->
+  <g stroke="#E8704A" stroke-width="1" fill="none" opacity="0.25">
+    <ellipse cx="950" cy="240" rx="280" ry="100"/>
+    <ellipse cx="950" cy="240" rx="380" ry="140" transform="rotate(20 950 240)"/>
+    <ellipse cx="950" cy="240" rx="480" ry="180" transform="rotate(-15 950 240)"/>
+  </g>
+
+  <!-- Brand mark -->
+  <g transform="translate(80 80)">
+    <circle cx="22" cy="22" r="20" fill="none" stroke="#E8704A" stroke-width="1.2" opacity="0.5"/>
+    <circle cx="22" cy="22" r="12" fill="none" stroke="#E8704A" stroke-width="1.5"/>
+    <circle cx="22" cy="22" r="4.4" fill="#E8704A"/>
+  </g>
+  <text x="136" y="102" fill="#F2EAE0" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="400" letter-spacing="-0.5">Cloud Agent IQ</text>
+
+  <!-- Eyebrow -->
+  <g transform="translate(80 220)">
+    <rect x="0" y="0" width="280" height="36" rx="18" fill="none" stroke="#3A342C" stroke-width="1"/>
+    <circle cx="20" cy="18" r="3.5" fill="#E8704A"/>
+    <text x="34" y="24" fill="#A89C8D" font-family="'Courier New', monospace" font-size="12" letter-spacing="1.5">AUTONOMOUS OPERATIONS · v4.2</text>
+  </g>
+
+  <!-- Main headline -->
+  <text x="80" y="340" fill="#F2EAE0" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="300" letter-spacing="-2.5">The intelligence layer</text>
+  <text x="80" y="425" fill="#F2EAE0" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="300" letter-spacing="-2.5">for <tspan fill="#E8704A" font-style="italic" font-weight="300">modern</tspan> business.</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="490" fill="#A89C8D" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="24" font-weight="300">Autonomous AI agents for sales · support · finance · ops · analytics</text>
+
+  <!-- Bottom bar -->
+  <line x1="80" y1="560" x2="1120" y2="560" stroke="#2A251F" stroke-width="1"/>
+  <text x="80" y="590" fill="#766C5F" font-family="'Courier New', monospace" font-size="14" letter-spacing="1.5">CLOUDAGENTIQ.COM</text>
+  <text x="1120" y="590" fill="#766C5F" font-family="'Courier New', monospace" font-size="14" letter-spacing="1.5" text-anchor="end">SOC 2 · ISO 27001 · HIPAA READY</text>
+</svg>
