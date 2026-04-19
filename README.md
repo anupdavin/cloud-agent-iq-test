@@ -32,7 +32,37 @@ The daemon writes its PID to `/tmp/caiq-server.pid` and logs to
 kill $(cat /tmp/caiq-server.pid)
 ```
 
-Behind a Cloudflare tunnel pointing `cloudagentiq.com → 127.0.0.1:8080`.
+## Deployment
+
+The site deploys automatically to **GitHub Pages** on every push to `main`
+via `.github/workflows/deploy.yml`.
+
+Pipeline:
+
+1. **Preflight** — verifies required files exist, internal `href`/`src`
+   references resolve, no `localhost` references leaked, no secret patterns
+   committed, basic HTML sanity.
+2. **Build** — copies the allowlisted files into `_site/` and writes a
+   `CNAME` file if the `CUSTOM_DOMAIN` repo variable is set.
+3. **Deploy** — uploads to Pages.
+
+Push to `main` → live in about 60 seconds. Preflight blocks deploy on failure.
+
+### Custom domain
+
+To serve from `cloudagentiq.com` instead of `*.github.io`:
+
+1. In the repo on GitHub: **Settings → Secrets and variables → Actions →
+   Variables tab → New repository variable** → `CUSTOM_DOMAIN` = `cloudagentiq.com`
+2. At your DNS provider: point the domain at GitHub Pages
+   (`185.199.108.153`, `.109.153`, `.110.153`, `.111.153` as A records, or
+   `anupdavin.github.io` as CNAME for subdomains).
+3. In **Settings → Pages**, enter the custom domain and tick "Enforce HTTPS"
+   once the cert has provisioned (~1 minute after DNS resolves).
+
+The `CUSTOM_DOMAIN` variable approach means the repo itself is
+domain-agnostic — you can fork it, point it at a different domain, without
+editing source.
 
 ## Files
 

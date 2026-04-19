@@ -1,0 +1,160 @@
+name: Deploy to GitHub Pages
+
+# Deploys the static site to GitHub Pages on every push to main.
+# Runs a fast preflight (broken links, secrets, basic HTML sanity) first.
+#
+# Manual deploys are allowed via the "Run workflow" button.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Only the permissions Pages actually needs
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two prod deploys at once. If a new push arrives mid-deploy,
+# skip the older queued run (but don't cancel one that's already live).
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    name: Preflight checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify required files exist
+        run: |
+          set -e
+          required=(index.html styles.css app.js 404.html favicon.svg robots.txt sitemap.xml og-image.svg)
+          missing=0
+          for f in "${required[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "::error file=$f::Required file missing"
+              missing=1
+            else
+              printf "  ✓ %s (%d bytes)\n" "$f" "$(wc -c <"$f")"
+            fi
+          done
+          exit $missing
+
+      - name: Check internal asset references resolve
+        run: |
+          set -e
+          fail=0
+          # Pull href="/..." and src="/..." from the HTML, skip external, anchors, data: URIs
+          refs=$(grep -ohE '(href|src)="/[^"#]*"' index.html 404.html \
+                 | sed -E 's/.*="([^"]*)".*/\1/' \
+                 | sort -u)
+          for ref in $refs; do
+            # "/" means the site root (index.html) — always valid
+            if [ "$ref" = "/" ]; then
+              echo "  ✓ $ref (site root)"
+              continue
+            fi
+            local_path="${ref#/}"
+            if [ -f "$local_path" ]; then
+              echo "  ✓ $ref"
+            else
+              echo "::error::Broken reference: $ref (expected at ./$local_path)"
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Forbid localhost / 127.0.0.1 in shipped files
+        run: |
+          set -e
+          # These appear only in dev tooling (server.py). Fail if they leak into HTML/CSS/JS.
+          if grep -rn --include='*.html' --include='*.css' --include='*.js' \
+               -E '(localhost|127\.0\.0\.1)' . 2>/dev/null; then
+            echo "::error::Dev-only localhost reference found in a shipped file"
+            exit 1
+          fi
+          echo "  ✓ no localhost references in shipped files"
+
+      - name: Scan for obvious secret leaks
+        run: |
+          set -e
+          # Fast, cheap regex pass. Not a replacement for gitleaks, but catches the dumb stuff.
+          patterns='(github_pat_[A-Za-z0-9_]{20,}|ghp_[A-Za-z0-9]{36}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----)'
+          # Scan tracked files, excluding .git itself
+          if git grep -nE "$patterns" -- ':!.git' 2>/dev/null; then
+            echo "::error::Possible secret committed"
+            exit 1
+          fi
+          echo "  ✓ no obvious secrets found"
+
+      - name: HTML sanity (title + viewport present, DOCTYPE correct)
+        run: |
+          set -e
+          for f in index.html 404.html; do
+            head -1 "$f" | grep -qi '<!doctype html>' || { echo "::error file=$f::Missing DOCTYPE on line 1"; exit 1; }
+            grep -q '<title>' "$f" || { echo "::error file=$f::Missing <title>"; exit 1; }
+            grep -q 'name="viewport"' "$f" || { echo "::error file=$f::Missing viewport meta"; exit 1; }
+            echo "  ✓ $f passes basic HTML sanity"
+          done
+
+  build:
+    name: Build deploy artifact
+    runs-on: ubuntu-latest
+    needs: preflight
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site directory
+        run: |
+          set -e
+          mkdir -p _site
+          # Copy only the files we want Pages to serve. Explicit allowlist > blanket copy.
+          cp index.html styles.css app.js 404.html _site/
+          cp favicon.svg apple-touch-icon.svg og-image.svg _site/
+          cp robots.txt sitemap.xml _site/
+          # CNAME is created below if configured
+          echo ""
+          echo "=== contents of _site ==="
+          ls -la _site
+          echo ""
+          echo "=== total size ==="
+          du -sh _site
+
+      - name: Write CNAME for custom domain
+        # Only creates the CNAME file if CUSTOM_DOMAIN repo variable is set.
+        # Safe to leave this step in even before the variable is configured.
+        env:
+          CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN }}
+        run: |
+          if [ -n "$CUSTOM_DOMAIN" ]; then
+            echo "$CUSTOM_DOMAIN" > _site/CNAME
+            echo "  ✓ CNAME written: $CUSTOM_DOMAIN"
+          else
+            echo "  (no CUSTOM_DOMAIN variable set; serving from *.github.io)"
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to Pages
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
